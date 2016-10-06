@@ -148,7 +148,7 @@ def main():
 
     addHeaders={
 
-    'Host': 'http://www.footlocker.com/
+    'Host': 'www.supremenewyork.com', 
 
     'Accept': 'application/json', 
 
@@ -162,13 +162,13 @@ def main():
 
     'Content-Type': 'application/x-www-form-urlencoded', 
 
-    'Origin': 'http://www.footlocker.com/, 
+    'Origin': 'http://www.supremenewyork.com', 
 
     'Connection': 'keep-alive', 
 
     'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 7_1_2 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) Mobile/11D257', 
 
-    'Referer': 'http://www.footlocker.com/mobile' 
+    'Referer': 'http://www.supremenewyork.com/mobile' 
 
     }
 
@@ -250,21 +250,21 @@ def main():
 
     'same_as_billing_address': '1',
 
-    'order[billing_name]': 'anon mous', # FirstName LastName
+    'order[billing_name]': 'Phoenix Rabang', # FirstName LastName
 
-    'order[email]': 'anon@mailinator.com', # email@domain.com
+    'order[email]': 'phoenixrabang@gmail.com', # email@domain.com
 
-    'order[tel]': '999-999-9999', # phone-number-here
+    'order[tel]': '408 582 4256', # phone-number-here
 
-    'order[billing_address]': '123 Seurat lane', # your address
+    'order[billing_address]': '375 south end ave', # your address
 
     'order[billing_address_2]': '',
 
-    'order[billing_zip]': '90210', # zip code
+    'order[billing_zip]': '10280', # zip code
 
-    'order[billing_city]': 'Beverly Hills', # city
+    'order[billing_city]': 'New York', # city
 
-    'order[billing_state]': 'CA', # state
+    'order[billing_state]': 'NY', # state
 
     'order[billing_country]': 'USA', # country
 
@@ -272,18 +272,17 @@ def main():
 
     'credit_card[type]': 'visa', # master or visa
 
-    'credit_card[cnb]': '9999 9999 9999 9999', # credit card number
+    'credit_card[cnb]': '4737 0290 4378 8786', # credit card number
 
-    'credit_card[month]': '01', # expiration month
+    'credit_card[month]': '06', # expiration month
 
-    'credit_card[year]': '2026', # expiration year
+    'credit_card[year]': '2019', # expiration year
 
-    'credit_card[vval]': '123', # cvc/cvv
+    'credit_card[vval]': '205', # cvc/cvv
 
     'order[terms]': '0',
 
     'order[terms]': '1'
-
     }
 
     # GHOST CHECKOUT PREVENTION WITH ROLLING PRINT
