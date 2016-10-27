@@ -1,4 +1,4 @@
-nn = int(input("Whats your last number?"))
+nn = int(input("Whats your last number? "))
 
 for n in range (1,nn):
     if n % 3==0 and n % 5 ==0:
