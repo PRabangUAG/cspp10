@@ -1,6 +1,6 @@
-nn = int(input("Whats your last number? "))
+un = int(input("Whats your last number? ")) 
 
-for n in range (1,nn):
+for n in range (1,un+1):
     if n % 3==0 and n % 5 ==0:
         fb = n
         fb = "Fizzbuzz"
