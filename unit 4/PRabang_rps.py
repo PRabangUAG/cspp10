@@ -4,8 +4,8 @@ import random
 #   purpose: present player with options, use input() to get player move
 #   returns: the player's move as either 'r', 'p', or 's'
 def get_p1_move():
-    v = input("Choose Rock, Paper or Scissors")
-    print("You chose")
+    pmove = input("Choose Rock, Paper or Scissors")
+    return pmove
 
 #function name: get_comp_move():
 #   arguments: none
@@ -13,14 +13,24 @@ def get_p1_move():
 #            either 'r' 'p' or 's'
 #   returns: the computer's randomly generated move
 def get_comp_move():
-    #code here
-
+    cpumove = random.randint(1,3)
+    if cpumove == 1:
+        return 'rock'
+    elif cpumove == 2:
+        return 'paper'
+    elif cpumove == 3:
+        return 'scissors'
+    
+    return cpumove
+    
 #function name: get_rounds
 #   arguments: none
 #   purpose: allows the user to choose a number of rounds from 1 to 9.
 #   returns: the user-chosen number of rounds
 def get_rounds():
-    #code here
+    rounds = int(inout("How many rounds?: "))
+    return rounds
+
 
 #function name: get_round_winner
 #   arguments: player move, computer move
@@ -31,7 +41,7 @@ def get_rounds():
 #               "comp" if computer won
 #               "tie" if it's a tie
 def get_round_winner(p1move, cmove):
-    #code here
+    return 1
 
 #function name: get_full_move
 #   arguments: a single letter move 'r','p', or 's'
@@ -41,14 +51,14 @@ def get_round_winner(p1move, cmove):
 #               "Paper" if given "p"
 #               "Scissors" if given "s"
 def get_full_move(shortmove):
-    #code here
+    return 1
 
 #function name: print_score
 #   arguments: player score, computer score, number of ties
 #   purpose: prints the scoreboard
 #   returns: none
 def print_score(pscore, cscore, ties):
-    #code here
+    return 1
 
 #function name: rps
 #   arguments: none
@@ -56,7 +66,7 @@ def print_score(pscore, cscore, ties):
 #               all the other functions to create RPS
 #   returns: none
 def rps():
-    #code here
+    return 1
 
 #function name: tests
 #   arguments: none
@@ -64,6 +74,7 @@ def rps():
 #               with 'tests' to run this function instead of the game loop
 #   returns: none
 def test():
-    #code here
+    return 1
+print (get_comp_move())
 
 rps()
