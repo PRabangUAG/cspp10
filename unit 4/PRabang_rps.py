@@ -4,8 +4,8 @@ import random
 #   purpose: present player with options, use input() to get player move
 #   returns: the player's move as either 'r', 'p', or 's'
 def get_p1_move():
-    pmove = input("Choose Rock, Paper or Scissors")
-    return pmove
+    pmove = input("Choose Rock, Paper or Scissors? ")
+    return pmove.lower()
 
 #function name: get_comp_move():
 #   arguments: none
@@ -28,7 +28,7 @@ def get_comp_move():
 #   purpose: allows the user to choose a number of rounds from 1 to 9.
 #   returns: the user-chosen number of rounds
 def get_rounds():
-    rounds = int(inout("How many rounds?: "))
+    rounds = input(int("How many rounds?: "))
     return rounds
 
 
@@ -41,17 +41,28 @@ def get_rounds():
 #               "comp" if computer won
 #               "tie" if it's a tie
 def get_round_winner(p1move, cmove):
-    return 1
+    if p1move == 'rock' and cmove == 'paper':
+        return("comp wins!")
+    elif p1move == 'scissors' and cmove == 'rock':
+        return("comp wins!")
+    elif p1move == 'paper' and cmove == 'scissors':
+        return ("comp wins!")
+    elif p1move == 'paper' and cmove == 'rock':
+        return("player wins!")
+    elif p1move == 'rock' and cmove == 'scissors':
+        return("player wins!")
+    elif p1move == 'scissors' and cmove == 'paper':
+        return ("player wins!")
+    elif p1move == 'paper' and cmove == 'paper':
+        return("tie!")
+    elif p1move == 'rock' and cmove == 'rock':
+        return("tie!")
+    elif p1move == 'scissors' and cmove == 'scissors':
+        return ("tie!")
+    else:
+        print("Error")
 
-#function name: get_full_move
-#   arguments: a single letter move 'r','p', or 's'
-#   purpose: returns the "full" word of a given move
-#   returns: returns a string based on the following:
-#               "Rock" if given "r"
-#               "Paper" if given "p"
-#               "Scissors" if given "s"
-def get_full_move(shortmove):
-    return 1
+
 
 #function name: print_score
 #   arguments: player score, computer score, number of ties
@@ -75,6 +86,7 @@ def rps():
 #   returns: none
 def test():
     return 1
-print (get_comp_move())
-
+print(get_rounds())
+print(get_p1_move())
+print(get_comp_move())
 rps()
