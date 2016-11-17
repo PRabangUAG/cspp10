@@ -4,7 +4,7 @@ import random
 #   purpose: present player with options, use input() to get player move
 #   returns: the player's move as either 'r', 'p', or 's'
 def get_p1_move():
-    pmove = input("Choose Rock, Paper or Scissors? ")
+    pmove = input("Choose rock, paper or scissors?(all lower case please) ")
     return pmove.lower()
 
 #function name: get_comp_move():
@@ -28,7 +28,7 @@ def get_comp_move():
 #   purpose: allows the user to choose a number of rounds from 1 to 9.
 #   returns: the user-chosen number of rounds
 def get_rounds():
-    rounds = input(int("How many rounds?: "))
+    rounds = int(input("How many rounds?: "))
     return rounds
 
 
@@ -61,15 +61,33 @@ def get_round_winner(p1move, cmove):
         return ("tie!")
     else:
         print("Error")
-
-
-
+    if p1move == 'rock' and cmove == 'paper':
+        return ("Player Loses")
+    if p1move == 'scissors' and cmove == 'rock':
+        return ("Player Loses")
+    if p1move == 'paper' and cmove == 'scissors':
+        return ("Player Loses")
+    if p1move == 'paper' and cmove == 'rock':
+        return ("Player Wins")
+    if p1move == 'rock' and cmove == 'scissors':
+        return ("Player Wins")
+    if p1move == 'scissors' and cmove == 'paper':
+        return ("Player Wins")
+    if p1move == 'paper' and cmove == 'paper':
+        return ("Tie!")
+    if p1move == 'rock' and cmove == 'rock':
+        return ("Tie!")
+    if p1move == 'scissors' and cmove == 'scissors':
+        return ("Tie!")
 #function name: print_score
 #   arguments: player score, computer score, number of ties
 #   purpose: prints the scoreboard
 #   returns: none
 def print_score(pscore, cscore, ties):
-    return 1
+    print("Player has a score of {} ".format(pscore))
+    print("Computer has a score of {} ".format(cscore))
+    print("You have tied {} many times ".format(ties))
+ 
 
 #function name: rps
 #   arguments: none
@@ -86,7 +104,11 @@ def rps():
 #   returns: none
 def test():
     return 1
-print(get_rounds())
-print(get_p1_move())
-print(get_comp_move())
+getrounds = get_rounds()
+cmove = get_comp_move()
+p1move = get_p1_move()
+comp_move = get_comp_move()
+roundwinner = get_round_winner(p1move,cmove)
+print(roundwinner)
+
 rps()
