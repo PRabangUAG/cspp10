@@ -61,24 +61,6 @@ def get_round_winner(p1move, cmove):
         return ("tie!")
     else:
         print("Error")
-    if p1move == 'rock' and cmove == 'paper':
-        return ("Player Loses")
-    if p1move == 'scissors' and cmove == 'rock':
-        return ("Player Loses")
-    if p1move == 'paper' and cmove == 'scissors':
-        return ("Player Loses")
-    if p1move == 'paper' and cmove == 'rock':
-        return ("Player Wins")
-    if p1move == 'rock' and cmove == 'scissors':
-        return ("Player Wins")
-    if p1move == 'scissors' and cmove == 'paper':
-        return ("Player Wins")
-    if p1move == 'paper' and cmove == 'paper':
-        return ("Tie!")
-    if p1move == 'rock' and cmove == 'rock':
-        return ("Tie!")
-    if p1move == 'scissors' and cmove == 'scissors':
-        return ("Tie!")
 #function name: print_score
 #   arguments: player score, computer score, number of ties
 #   purpose: prints the scoreboard
@@ -94,8 +76,20 @@ def print_score(pscore, cscore, ties):
 #   purpose: the main game loop.  This should be the longest, using
 #               all the other functions to create RPS
 #   returns: none
-def rps():
-    return 1
+def rps(): 
+    rounds = get_rounds()
+    for rounds in range(int(rounds)):
+        p1move = get_p1_move()
+        comp_move = get_comp_move()
+        print("player chose {} ".format(p1move))
+        print("comp chose {} ".format(comp_move))
+        winner = get_round_winner(p1move,comp_move)
+        if winner == "player wins!":
+            print("Player Won")
+        elif winner == "comp wins!":
+            print("Comp won")
+        else:
+            print ("its a tie")
 
 #function name: tests
 #   arguments: none
@@ -104,11 +98,5 @@ def rps():
 #   returns: none
 def test():
     return 1
-getrounds = get_rounds()
-cmove = get_comp_move()
-p1move = get_p1_move()
-comp_move = get_comp_move()
-roundwinner = get_round_winner(p1move,cmove)
-print(roundwinner)
 
 rps()
