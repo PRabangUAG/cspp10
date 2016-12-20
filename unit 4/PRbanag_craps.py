@@ -3,7 +3,7 @@ import random
 #This is youur bet, it tells you if you have enough or not, asking how much you would like to bet
 def get_bet(bank_account):
     while True:
-        bet=int(input("How much would you like to bet?"))
+        bet=int(input("How much would you like to bet? $"))
         if bet<0:
             print("your number must be a postive integer and greater than 0")
         elif bet>100:
@@ -22,8 +22,10 @@ def roll2dice():
 def first_dice_result(dice_sum):
     if dice_sum == 7 or dice_sum == 11:
         print("you win")
+        return(craps())
     elif dice_sum == 2 or dice_sum == 3 or dice_sum == 12:
         print ("you lose")
+        return(craps())
     else:
         return dice_sum
     
@@ -31,18 +33,14 @@ def second_roll_result(dice_sum,point_roll):
     if dice_sum == point_roll:
         print("you win")
     elif dice_sum == 7:
-        print("you los")
+        print("you lose")
     else:
-        print("try again")
-    while (roll2dice() != 7 and roll2dice() != point_roll):
-        print (roll2dice())
-    return (second_roll_result)
+        while (dice_sum != 7 and dice_sum != point_roll):
+            dice_sum=roll2dice()
+            return (second_roll_result)
     
 
-def point_roll(roll, point_roll,dice_sum):
-    while (roll != 7 and roll != point_roll):
-        print(roll2dice)
-    return(second_roll_result)
+
         
  
 def craps():
