@@ -25,11 +25,14 @@ def roll2dice():
 def first_dice_result(dice_sum):
     if dice_sum == 7 or dice_sum == 11:
         print("you win")
+        return "you win"
     elif dice_sum == 2 or dice_sum == 3 or dice_sum == 12:
         print ("you lose")
+        return "you lose"
     else:
         return dice_sum
         
+    
         #second round if the numbers are not 7,11,2,3,12 it then goes into this function to keep rolling until the first roll numbers or 7
 def second_roll_result(dice_sum,point_roll):
     if dice_sum == point_roll:
