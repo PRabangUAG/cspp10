@@ -62,7 +62,7 @@ def craps():
         print ("__________________________________")
         while bank_account > 0:
             if bank_account <= 0:
-                return "You broke as shit"
+                return "You're broke"
             elif bank_account > 0:
                 return craps()
         
